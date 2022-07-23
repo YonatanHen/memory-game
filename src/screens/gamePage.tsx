@@ -66,7 +66,7 @@ export const GamePage = () => {
 			if (bulb && bulb.dataset.color) {
 				bulb.style.backgroundColor = bulb.dataset.color
 				await sleep(1000)
-				bulb.style.backgroundColor = 'white'
+				bulb.style.backgroundColor = 'transparent'
 			}
 		}
 	}
@@ -91,6 +91,7 @@ export const GamePage = () => {
 			isClicked(false)
 			setCurrent([])
 			bulbs.current = []
+			console.log(document.getElementsByTagName('td'))
 
 		}
 	}
@@ -124,7 +125,7 @@ export const GamePage = () => {
 									key={i}
 									data-color={colors[i]}
 									onClick={() => handleClick(i)}
-									style={{ background: 'white '}}
+									// style={{ background: 'white '}}
 								></td>
 							)
 						})}
@@ -137,7 +138,7 @@ export const GamePage = () => {
 									key={i + 3}
 									data-color={colors[i + 3]}
 									onClick={() => handleClick(i + 3)}
-									style={{ background: 'white '}}
+									// style={{ background: 'white '}}
 								></td>
 							)
 						})}
