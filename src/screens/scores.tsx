@@ -11,7 +11,7 @@ export const Scores = () => {
 			<ul>
 				{scores.map((score: any, i: number) => {
 					return (
-						<li id={i.toString()}>
+						<li key={i.toString()}>
 							{`${score.score} - ${new Date(score.date).toLocaleTimeString()}`}
 						</li>
 					)
