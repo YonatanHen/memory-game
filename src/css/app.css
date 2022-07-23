@@ -1,0 +1,12 @@
+button, input[type=submit] {
+    background-color: rgb(21, 24, 21);
+    font-size: 16px;
+    font-weight: 600;
+    color: gold;
+    border: gold solid 4px;
+}
+
+input[type=submit] {
+    margin-top: 10px;
+    margin-left: 50%;
+}

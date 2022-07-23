@@ -31,17 +31,12 @@ table {
 	border-spacing: 8em 5em;
 }
 
-.game button {
+button {
 	left: 42%;
 	position: fixed;
     border-radius: 10%;
     width: 15%;
     height: 7%;
-    background-color: rgb(21, 24, 21);
-    font-size: 16px;
-    font-weight: 600;
-    color: gold;
-    border: gold solid 4px;
 }
 
 .game button:disabled {
