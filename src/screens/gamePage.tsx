@@ -24,8 +24,19 @@ export const GamePage = () => {
 			dispatch({
 				type: ADD_TO_SCORE,
 			})
-			console.log(user)
-		}
+
+			if (bulbs.current.length == 6){
+				alert('You Win!!!')
+
+				dispatch ({
+					type: UPDATE_SCORES
+				})
+
+				dispatch({
+					type: INITIALIZE_SCORE
+				})
+			}
+		} 
 	}, [current])
 
 	const handleGame = async (event: any) => {
@@ -61,12 +72,18 @@ export const GamePage = () => {
 		var temp = [...current]
 
 		if (current[0] == temp[0] && temp[0] == index) {
-			await temp.shift()
+			temp.shift()
 			setCurrent([...temp])
 		} else {
 			alert('You Failed!')
 
-			// dispatch & save scores
+			dispatch ({
+				type: UPDATE_SCORES
+			})
+
+			dispatch({
+				type: INITIALIZE_SCORE
+			})	
 		}
 	}
 
