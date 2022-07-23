@@ -1,0 +1,51 @@
+.game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    border-spacing: 8em 5em;
+}
+
+.game button {
+    left: 45%;
+    position: fixed;
+
+}
+
+td {
+    border: black 1px solid;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+}
+
+.not-flipped {
+    background: white;
+}
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.blue {
+    background: blue;
+}
+
+.purple {
+    background: purple;
+}
+
+.orange {
+    background: orange;
+}
+
+.grey {
+    background: grey;
+}

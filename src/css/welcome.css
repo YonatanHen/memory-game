@@ -1,0 +1,8 @@
+.welcomePageContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-spacing: 8em 5em;
+}
+
