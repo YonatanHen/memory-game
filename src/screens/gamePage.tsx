@@ -58,8 +58,8 @@ export const GamePage = () => {
 		const sleep = (ms: number | undefined) =>
 			new Promise((resolve) => setTimeout(resolve, ms))
 
+		// paint the bulbs in randomal order for 1 sec each
 		for (let j = 0; j < bulbs.current.length; j++) {
-			console.log(bulbs.current[j])
 			var bulb: HTMLElement | null = document.getElementById(
 				bulbs.current[j].toString()
 			)
@@ -124,6 +124,7 @@ export const GamePage = () => {
 									key={i}
 									data-color={colors[i]}
 									onClick={() => handleClick(i)}
+									style={{ background: 'white '}}
 								></td>
 							)
 						})}
@@ -136,6 +137,7 @@ export const GamePage = () => {
 									key={i + 3}
 									data-color={colors[i + 3]}
 									onClick={() => handleClick(i + 3)}
+									style={{ background: 'white '}}
 								></td>
 							)
 						})}

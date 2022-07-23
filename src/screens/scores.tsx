@@ -10,7 +10,6 @@ export const Scores = () => {
 			<h1 style={{ color: 'gold', marginLeft: '5px' }}>Previous Scores:</h1>
 			<ul>
 				{scores.map((score: any, i: number) => {
-					console.log(score)
 					return (
 						<li id={i.toString()}>
 							{`${score.score} - ${new Date(score.date).toLocaleTimeString()}`}
