@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { colors } from '../constants/colors'
-import '../css/game.css'
 import {
 	ADD_TO_SCORE,
 	INITIALIZE_SCORE,
@@ -35,6 +34,10 @@ export const GamePage = () => {
 				dispatch({
 					type: INITIALIZE_SCORE
 				})
+
+				isClicked(false)
+				setCurrent([])
+				bulbs.current = []
 			}
 		} 
 	}, [current])
@@ -75,7 +78,7 @@ export const GamePage = () => {
 			temp.shift()
 			setCurrent([...temp])
 		} else {
-			alert('You Failed!')
+			alert('You Lose!')
 
 			dispatch ({
 				type: UPDATE_SCORES
@@ -83,12 +86,17 @@ export const GamePage = () => {
 
 			dispatch({
 				type: INITIALIZE_SCORE
-			})	
+			})
+
+			isClicked(false)
+			setCurrent([])
+			bulbs.current = []
+
 		}
 	}
 
 	return (
-		<div>
+		<div className='split game-container'>
 			<h1>Game Page</h1>
 			<h2>{`Username: ${user.uname} | Score: ${
 				user.currentScore

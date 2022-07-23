@@ -1,7 +1,7 @@
 import React from 'react';
  
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { GamePage } from './screens/gamePage';
+import Main from './screens/mainPage';
 import { WelcomePage } from './screens/welcomePage'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<WelcomePage />} />
-        <Route path='/game' element={<GamePage />} />
+        <Route path='/game' element={<Main />} />
         </Routes>
       </BrowserRouter>
   );
