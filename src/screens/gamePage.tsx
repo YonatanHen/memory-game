@@ -97,8 +97,7 @@ export const GamePage = () => {
 
 	return (
 		<div className='split game-container'>
-			<h1>Game Page</h1>
-			<h2>{`Username: ${user.uname} | Score: ${
+			<h1 style={{ paddingLeft: 10} }>{`Username: ${user.uname} | Score: ${
 				user.currentScore
 			} | Highest Score: ${
 				user.scores.length > 0
@@ -108,7 +107,7 @@ export const GamePage = () => {
 							})
 					  )
 					: 0
-			}`}</h2>
+			}`}</h1>
 			<div className='game'>
 				<button
 					onClick={handleGame}
