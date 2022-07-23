@@ -7,7 +7,7 @@ export const Scores = () => {
 
 	return (
 		<div className='split scores-container'>
-			<h1 style={{ color: 'gold'}}>Previous Scores:</h1>
+			<h1 style={{ color: 'gold', marginLeft: '5px' }}>Previous Scores:</h1>
 			<ul>
 				{scores.map((score: any, i: number) => {
 					console.log(score)
